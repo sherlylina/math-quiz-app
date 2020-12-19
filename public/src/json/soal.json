@@ -1,0 +1,182 @@
+{
+	"latihan_jumlah":[
+		{
+			"pertanyaan": "21 + 5 =",
+			"jawaban": [26,27,16]
+		},
+		{
+			"pertanyaan": "225 + 54 =",
+			"jawaban": [279,229,379]
+		},
+		{
+			"pertanyaan": "30 + 74 + 28 =",
+			"jawaban": [132, 142, 122]
+		}
+	],
+	"latihan_kurang":[
+		{
+			"pertanyaan": "29 - 20 =",
+			"jawaban": [9, 10, 20]
+		},
+		{
+			"pertanyaan": "179 - 112 =",
+			"jawaban": [67, 81, 71]
+		},
+		{
+			"pertanyaan": "80 - 27 - 9 =",
+			"jawaban": [44, 48, 64]
+		}
+	],
+	"latihan_kali":[
+		{
+			"pertanyaan": "4 x 25 =",
+			"jawaban": [100, 125, 80]
+		},
+		{
+			"pertanyaan": "95 x 20 =",
+			"jawaban": [1900, 1550, 1850]
+		},
+		{
+			"pertanyaan": "15 x 4 x 6 = ",
+			"jawaban": [360, 200, 300]
+		}
+	],
+	"latihan_bagi":[
+		{
+			"pertanyaan": "12 : 3 =",
+			"jawaban": [4, 3, 6]
+		},
+		{
+			"pertanyaan": "196 : 7 =",
+			"jawaban": [28, 32, 18]
+		},
+		{
+			"pertanyaan": "912 : 4 : 2 =",
+			"jawaban": [114, 119, 124]
+		}
+	],
+	"session_one":[
+		{
+			"pertanyaan": "10 + 12 - 5 =",
+			"jawaban": [17, 27, 12]
+		},
+		{
+			"pertanyaan": "120 : 30 x 4 =",
+			"jawaban": [16, 20, 12]
+		},
+		{
+			"pertanyaan": "35 - 5 x 4 =",
+			"jawaban": [15, 20, 25]
+		},
+		{
+			"pertanyaan": "(245 + 35) : 7 =",
+			"jawaban": [40, 45, 20]
+		},
+		{
+			"pertanyaan": "82 x 5 + 40 = ",
+			"jawaban": [450, 350, 425]
+		},
+		{
+			"pertanyaan": "80 + 75 - 15 =",
+			"jawaban": [130, 125, 170]
+		},
+		{
+			"pertanyaan": "250 : 5 - 25 ",
+			"jawaban": [25, 30, 5]
+		},
+		{
+			"pertanyaan": "912 : 4 : 6 = ",
+			"jawaban": [38, 40, 28]
+		},
+		{
+			"pertanyaan": "15 x 15 x 2 = ",
+			"jawaban": [450, 30, 150]
+		},
+		{
+			"pertanyaan": "32 x 2 : 8 + 12 =",
+			"jawaban": [20, 64, 40]
+		},
+	
+		{
+			"pertanyaan": "34 + 35 =",
+			"jawaban": [69, 79, 60]
+		},
+		{
+			"pertanyaan": "175 + 98 = ",
+			"jawaban": [273, 253, 223]
+		},
+		{
+			"pertanyaan": "152 + 30 + 55 =",
+			"jawaban": [237, 187, 207]
+		},
+		{
+			"pertanyaan": "85 - 11 =",
+			"jawaban": [74, 96, 64]
+		},
+		{
+			"pertanyaan": "155 - 64 =",
+			"jawaban": [91, 101, 81]
+		},
+		{
+			"pertanyaan": "165 - 27 - 18 =",
+			"jawaban": [120, 155, 115]
+		},
+		{
+			"pertanyaan": "900 : 30 =",
+			"jawaban": [30, 60, 90]
+		},
+		{
+			"pertanyaan": "2650 : 25 =",
+			"jawaban": [106, 100, 125]
+		},
+		{
+			"pertanyaan": "46 x 39 =",
+			"jawaban": [1794, 1800, 1864]
+		},
+		{
+			"pertanyaan": "205 x 45 x 14 =",
+			"jawaban": [129150, 130250, 125450]
+		},
+	
+		{
+			"pertanyaan": "86 + 45 =",
+			"jawaban": [131, 121, 151]
+		},
+		{
+			"pertanyaan": "235 + 105 =",
+			"jawaban": [340, 240, 320]
+		},
+		{
+			"pertanyaan": "357 + 56 + 77 =",
+			"jawaban": [490, 500, 470]
+		},
+		{
+			"pertanyaan": "95 - 19 =",
+			"jawaban": [76, 86, 75]
+		},
+		{
+			"pertanyaan": "357 - 94 =",
+			"jawaban": [263, 163, 281]
+		},
+		{
+			"pertanyaan": "467 - 57 - 38 =",
+			"jawaban": [372, 362, 342]
+		},
+		{
+			"pertanyaan": "950 : 50 =",
+			"jawaban": [19, 20, 9]
+		},
+		{
+			"pertanyaan": "4750 : 25 =",
+			"jawaban": [190, 255, 245]
+		},
+		{
+			"pertanyaan": "127 x 130 =",
+			"jawaban": [16510, 17500, 16220]
+		},
+		{
+			"pertanyaan": "342 x 55 x 34 =",
+			"jawaban": [639540, 645540, 629520]
+		}
+	]
+}
