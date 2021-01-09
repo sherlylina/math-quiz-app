@@ -1,0 +1,50 @@
+.slick-next:before, .slick-prev:before{
+    color: black;
+}
+
+.main-exam .w-num{
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    background: pink;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.main-exam .w-num.current{
+    border: 2px solid black;
+}
+
+.main-exam .w-num.active{
+    background-color: gray;
+}
+
+.main-exam .slick-next, .main-exam .slick-prev{
+    top: initial;
+    bottom: 0;
+}
+
+.main-exam .slick-next{
+    right: 0;
+}
+
+.main-exam .slick-prev{
+    right: 0;
+}
+
+body{
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 500;
+}
+
+.soal span{
+    background: red;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}

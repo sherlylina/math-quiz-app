@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- vendor -->
+    <link rel="stylesheet" href="./vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./vendor/slick/slick.min.css">
+    <link rel="stylesheet" href="./vendor/slick/slick-theme.min.css">
+    <!-- style -->
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main-exam">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 mx-auto" id="questions">
+                    <div class="time">
+                        <span id="minute"></span>
+                        <span>:</span>
+                        <span id="second"></span>
+                    </div>
+                    <form id="myForm" method="post" action="">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="exam-exercise h-100">
+                                </div>
+                            
+                            </div>
+                            <div class="col-md-3 pl-md-5">
+                                <div class="row number-exam text-center">
+                                </div>
+                                <div class="text-center mt-3">
+                                    <button class="btn btn-primary" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-10 mx-auto" id="result">
+                    <div class="result-warp">
+                    </div>
+                    <div class="total">
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+
+    <!-- vendor -->
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="./vendor/slick/slick.min.js"></script>
+    <script src="./src/script/main.js"></script>
+    <script>
+        // window.onbeforeunload = function() {
+        //     return "are you sure to reload?, we dont save your previous answer";
+        // }
+        $(document).ready(function(){
+            $('.exam-exercise').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: false
+            });
+            $('.exam-exercise').on('afterChange', function(event, slick, currentSlide){
+                $('.w-num').removeClass('current');
+                $(`.w-num:eq(${currentSlide})`).addClass('current');
+                // left
+            });
+            mainQuestion('exam');
+        });
+      
+    </script>
+</body>
+</html>
