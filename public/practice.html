@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- vendor -->
+    <link rel="stylesheet" href="./vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./vendor/slick/slick.min.css">
+    <link rel="stylesheet" href="./vendor/slick/slick-theme.min.css">
+    <!-- style -->
+    <link rel="stylesheet" href="./src/styles/main.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="warp-prac">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 bg-main" style="background-image: url('./src/images/bg/bg-menu.jpg')">
+                    <div class="row warp-abs justify-content-between align-items-center abs-top">
+                        <div class="col-3 pr-md-4">
+                            <div class="tag-name">
+                                <h3 class="text-capitalize mb-0"></h3>
+                            </div>
+                        </div>
+                        <div class="col-1">
+                            <a class="d-inline-block" href="./menu.html">
+                                <img src="./src/images/comp/Button-Home.png" class="w-100" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row w-100">
+                        <div class="col-md-10 px-3 py-0 bg-board mx-auto" style="background-image: url('./src/images/bg/Whiteboard-Exam.png')">
+                            <div class="practice h-100"></div>
+                        </div>
+                    </div>
+                    <div class="row warp-abs abs-down justify-content-between">
+                        <div class="col-md-2 px-5 col-6">
+                            <img id="prev" class="w-100 pointer" src="./src/images/comp/Previous-Menu.png" alt="">
+                        </div>
+                        <div class="col-md-2 px-5 col-6">
+                            <img id="next" class="w-100 pointer" src="./src/images/comp/Next-Button.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- vendor -->
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="./vendor/slick/slick.min.js"></script>
+    <script src="./src/script/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script>
+        $(document).ready(function(){
+         // pagination
+            let takeHash = window.location.hash;
+            takeHash = takeHash.replace('#', '');
+            $('.practice').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: false,
+                arrow: false,
+                speed: 500,
+                fade: true,
+                cssEase: 'linear',
+                prevArrow: $('#prev'),
+                nextArrow: $('#next'),
+            });
+            $('.tag-name h3').text(takeHash);
+            mainQuestion(takeHash);
+        });
+      
+    </script>
+</body>
+</html>

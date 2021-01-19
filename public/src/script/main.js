@@ -45,6 +45,7 @@ function mainQuestion(params){
                         <span class="box-answer">${dataSoal[i].jawaban2[0]}</span>
                         <span class="box-answer">${dataSoal[i].jawaban2[1]}</span>
                         <span class="box-answer">${dataSoal[i].jawaban2[2]}</span>
+                        <span class="box-answer">${dataSoal[i].jawaban2[3]}</span>
                     </div>
                 </div>`);
             }

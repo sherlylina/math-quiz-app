@@ -3,68 +3,68 @@
 		{
 			"pertanyaan": "21 + 5 =",
 			"jawaban": 26,
-			"jawaban2":[26,16, 25]
+			"jawaban2":[26, 16, 25, 20]
 		},
 		{
 			"pertanyaan": "225 + 54 =",
 			"jawaban": 279,
-			"jawaban2":[229,379, 279]
+			"jawaban2":[229,379, 279, 297]
 		},
 		{
 			"pertanyaan": "30 + 74 + 28 =",
 			"jawaban": 132, 
-			"jawaban2":[132, 122, 124]
+			"jawaban2":[132, 122, 124, 142]
 		}
 	],
 	"latihan_kurang":[
 		{
 			"pertanyaan": "29 - 20 =",
 			"jawaban": 9, 
-			"jawaban2":[10, 20, 8]
+			"jawaban2":[10, 20, 9, 11]
 		},
 		{
 			"pertanyaan": "179 - 112 =",
 			"jawaban": 67, 
-			"jawaban2":[81, 71, 77]
+			"jawaban2":[81, 76, 67, 72]
 		},
 		{
 			"pertanyaan": "80 - 27 - 9 =",
 			"jawaban": 44, 
-			"jawaban2":[48, 64, 73]
+			"jawaban2":[44, 64, 73, 37]
 		}
 	],
 	"latihan_kali":[
 		{
 			"pertanyaan": "4 x 25 =",
 			"jawaban": 100, 
-			"jawaban2":[125, 100, 75]
+			"jawaban2":[125, 100, 75, 101]
 		},
 		{
 			"pertanyaan": "95 x 20 =",
 			"jawaban": 1900, 
-			"jawaban2":[1550, 1900, 1800]
+			"jawaban2":[1550, 1900, 1800, 1008]
 		},
 		{
 			"pertanyaan": "15 x 4 x 6 = ",
 			"jawaban": 360, 
-			"jawaban2":[200, 300, 360]
+			"jawaban2":[200, 300, 360, 361]
 		}
 	],
 	"latihan_bagi":[
 		{
 			"pertanyaan": "12 : 3 =",
 			"jawaban": 4, 
-			"jawaban2":[3, 6, 12]
+			"jawaban2":[3, 6, 12, 4]
 		},
 		{
 			"pertanyaan": "196 : 7 =",
 			"jawaban": 28, 
-			"jawaban2":[32, 18, 38]
+			"jawaban2":[32, 18, 82, 28]
 		},
 		{
 			"pertanyaan": "912 : 4 : 2 =",
 			"jawaban": 114, 
-			"jawaban2":[119, 124, 116]
+			"jawaban2":[119, 124, 141, 114]
 		}
 	],
 	"session_one":[

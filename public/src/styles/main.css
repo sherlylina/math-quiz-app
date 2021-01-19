@@ -1,5 +1,72 @@
+/* general */
+body{
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: 700;
+}
+.pointer{
+    cursor: pointer;
+}
+.btn{
+    width: 260px;
+    height: 100px;
+    padding: 0 60px;
+    color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    font-weight: 600;
+    font-size: 25pt;
+    text-transform: uppercase;
+    align-items: center;
+    padding-bottom: 5px;
+    justify-content: center;
+}
+.btn:focus{
+    outline: initial;
+    border: none;
+    box-shadow: initial;
+}
+.button-blue{
+    background-image: url('../images/comp/button-biru.png');
+}
+.button-green{
+    background-image: url('../images/comp/button-hijau.png');
+}
+input{
+    border: none;
+    background: transparent;
+    margin-bottom: 10px;
+    font-size: 20pt;
+    width: 100%;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+}
+input:focus{
+    border: none;
+    outline: initial;
+}
+a{
+    color: inherit;
+}
+a:hover{
+    text-decoration: initial;
+    color: inherit;
+}
+
+
 .slick-next:before, .slick-prev:before{
     color: black;
+}
+
+.slick-list, .slick-track{
+    height: 100%;
 }
 
 .main-exam .w-num{
@@ -33,11 +100,6 @@
     right: 0;
 }
 
-body{
-    font-family: 'Catamaran', sans-serif;
-    font-weight: 500;
-}
-
 .soal span{
     background: red;
     color: white;
@@ -47,4 +109,144 @@ body{
     display: inline-flex;
     align-items: center;
     justify-content: center;
+}
+
+.question{
+    text-align: center;
+    position: relative;
+    padding-top: 10rem;
+    outline: none !important;
+}
+
+.question .w-choice{
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.question .w-ques{
+    font-size: 50pt;
+    font-weight: 700;
+    letter-spacing: 10pt;
+    color: black;
+}
+
+
+.question .box-answer{
+    background-image: url(../images/comp/Bulatan-Hijau.png);
+    background-size: contain;
+    height: 90px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 23pt;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* background */
+
+.bg-main{
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.bg-board{
+    background-image: url('../images/bg/Whiteboard.png');
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 25px 40px;
+}
+
+.tag-name{
+    background-image: url('../images/bg/bg-kosong.png');
+    width: 100%;
+    color: black;
+    height: 90px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* abs */
+
+.warp-abs{
+    position: absolute;
+    width: 100%;
+    left: 15px;
+}
+
+.abs-top{
+    top: 15px;
+}
+
+.abs-down{
+    bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+/* home */
+
+.main-home .gif img{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.main-home .gif .img-2{
+    width: 70%;
+    top: initial;
+    left: initial;
+    bottom: 20px;
+    right: 0;
+}
+
+.main-home .start{
+    position: relative;
+}
+
+/* menu */
+
+.main-menu .menu-play{
+    background-image: url(../images/comp/kayu-play.png);
+    width: 100%;
+    height: 80px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.main-menu .menu-play:hover .icon{
+    animation: jello 2s infinite;
+}
+
+.main-menu .menu-play .icon{
+    height: 125px;
+    width: 125px;
+}
+
+
+#prev.slick-disabled, #next.slick-disabled{
+    display: none;
 }
