@@ -3,6 +3,7 @@ body{
     position: relative;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    background: #33ccff;
 }
 h1, h2, h3, h4, h5, h6{
     font-weight: 700;
@@ -11,19 +12,19 @@ h1, h2, h3, h4, h5, h6{
     cursor: pointer;
 }
 .btn{
-    width: 260px;
-    height: 100px;
-    padding: 0 60px;
+    width: 250px;
+    height: 95px;
+    padding: 0 50px;
     color: white;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    display: flex;
     font-weight: 600;
-    font-size: 25pt;
+    font-size: 20pt;
     text-transform: uppercase;
-    align-items: center;
     padding-bottom: 5px;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 .btn:focus{
@@ -37,10 +38,11 @@ h1, h2, h3, h4, h5, h6{
 .button-green{
     background-image: url('../images/comp/button-hijau.png');
 }
+
 input{
     border: none;
     background: transparent;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 20pt;
     width: 100%;
     font-weight: 600;
@@ -73,18 +75,19 @@ a:hover{
     cursor: pointer;
     display: block;
     width: 100%;
-    background: pink;
+    background: #663333;
     color: white;
     border-radius: 5px;
-    padding: 5px;
+    padding: 8px;
+    font-weight: 700;
 }
 
 .main-exam .w-num.current{
-    border: 2px solid black;
+   background: green;
 }
 
 .main-exam .w-num.active{
-    background-color: gray;
+    background: gray;
 }
 
 .main-exam .slick-next, .main-exam .slick-prev{
@@ -114,8 +117,11 @@ a:hover{
 .question{
     text-align: center;
     position: relative;
-    padding-top: 10rem;
     outline: none !important;
+}
+
+.main-practice .question {
+    padding-top: 9rem;
 }
 
 .question .w-choice{
@@ -128,10 +134,10 @@ a:hover{
 }
 
 .question .w-ques{
-    font-size: 50pt;
+    font-size: 60pt;
     font-weight: 700;
-    letter-spacing: 10pt;
-    color: black;
+    letter-spacing: 8pt;
+    color: #0A1172;
 }
 
 
@@ -163,6 +169,7 @@ a:hover{
     align-items: center;
     justify-content: center;
     position: relative;
+    box-shadow: 0 6px 7px rgba(0,0,0,.25);
 }
 
 .bg-board{
@@ -173,6 +180,7 @@ a:hover{
     background-position: center;
     background-repeat: no-repeat;
     padding: 25px 40px;
+    overflow: hidden;
 }
 
 .tag-name{
@@ -249,4 +257,45 @@ a:hover{
 
 #prev.slick-disabled, #next.slick-disabled{
     display: none;
+}
+
+.bg-kayu{
+    background-image: url(../images/comp/Kayu.png);
+    height: 130px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 100px;
+}
+
+.main-exam .question .soal label{
+    font-size: 50pt;
+    font-weight: 700;
+    letter-spacing: 8pt;
+    color: #0A1172;
+    padding-top: 3.5rem;
+}
+
+.main-exam .time{
+    font-size: 15pt;
+    font-weight: 700;
+    text-shadow: 2px 2px black;
+}
+
+.main-result .w-name h1{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    top: -25px;
+    font-size: 3.2rem;
+    color: #fafa80;
+    text-shadow: 1px 2px green;
 }

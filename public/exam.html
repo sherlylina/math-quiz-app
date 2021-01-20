@@ -10,41 +10,55 @@
     <link rel="stylesheet" href="./vendor/slick/slick-theme.min.css">
     <!-- style -->
     <link rel="stylesheet" href="./src/styles/main.css">
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="main-exam">
         <div class="container">
             <div class="row">
-                <div class="col-md-10 mx-auto" id="questions">
-                    <div class="time">
-                        <span id="minute"></span>
-                        <span>:</span>
-                        <span id="second"></span>
-                    </div>
-                    <form id="myForm" method="post" action="">
-                        <div class="row">
-                            <div class="col-md-9">
-                                <div class="exam-exercise h-100">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 bg-main" style="background-image: url('./src/images/bg/bg-menu.jpg')">
+                            <div class="row warp-abs justify-content-between align-items-center abs-top">
+                                <div class="col-3 pr-md-4">
+                                    <div class="tag-name">
+                                        <h3 class="text-capitalize mb-0">Exam</h3>
+                                    </div>
                                 </div>
-            
-                            </div>
-                            <div class="col-md-3 pl-md-5">
-                                <div class="row number-exam text-center">
-                                </div>
-                                <div class="text-center mt-3">
-                                    <button class="btn btn-primary" type="submit">Submit</button>
+                                <div class="col-1">
+                                    <a class="d-inline-block" href="./menu.html">
+                                        <img src="./src/images/comp/Button-Home.png" class="w-100" alt="">
+                                    </a>
                                 </div>
                             </div>
+                            <form  class="w-100 pb-5" id="myForm" method="post" action="">
+                                <div class="row">
+                                    <div class="col-md-12 mb-2 text-center time">
+                                        <span id="minute"></span>
+                                        <span>:</span>
+                                        <span id="second"></span>
+                                    </div>
+                                    <div class="col-md-10 bg-board px-3 py-0 mx-auto" style="background-position: top; height: 280px;">
+                                        <div class="exam-exercise h-100">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10 mx-auto">
+                                        <div class="row number-exam text-center">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row warp-abs abs-down align-items-center justify-content-between">
+                                    <div class="col-md-2 px-5 col-6">
+                                        <img id="prev" class="w-100 pointer" src="./src/images/comp/Previous-Menu.png" alt="">
+                                    </div>
+                                    <div class="col-md-4 col-6">
+                                        <button class="btn mx-auto button-green" type="submit">Result</button>
+                                    </div>
+                                    <div class="col-md-2 px-5 col-6">
+                                        <img id="next" class="w-100 pointer" src="./src/images/comp/Next-Button.png" alt="">
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                    </form>
-                </div>
-                <div class="col-md-10 mx-auto" id="result">
-                    <div class="result-warp">
-                    </div>
-                    <div class="total">
                     </div>
                 </div>
             </div>
@@ -64,7 +78,13 @@
             $('.exam-exercise').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                infinite: false
+                infinite: false,
+                arrow: false,
+                speed: 500,
+                fade: true,
+                cssEase: 'linear',
+                prevArrow: $('#prev'),
+                nextArrow: $('#next')
             });
             $('.exam-exercise').on('afterChange', function(event, slick, currentSlide){
                 $('.w-num').removeClass('current');

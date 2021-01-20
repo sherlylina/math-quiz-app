@@ -24,7 +24,7 @@ function mainQuestion(params){
     $.getJSON('./src/json/soal.json', function(json) {
         if(params == 'addition'){
             dataSoal = json.latihan_jumlah;
-        }else if(params == 'times'){
+        }else if(params == 'multiplication'){
             dataSoal = json.latihan_kali;
         }else if(params == 'subtraction'){
             dataSoal = json.latihan_kurang;
@@ -57,20 +57,21 @@ function mainQuestion(params){
                 $('.exam-exercise').slick('slickAdd',`
                 <div class="question" id=${i}>
                     <div class="soal">
-                        <span class="mr-3">${i+1}</span>
                         <label for="answer-${i}">${dataSoal[i].pertanyaan}</label>
-                        <input name="answer-${i}" id="answer-${i}" type="number">
+                        <div class="bg-kayu">
+                            <input type="number" placeholder="Write Your Answer Here" id="answer-${i}" name="answer-${i}">
+                        </div>
                     </div>
                 </div>`);
                 if(i == 0){
                     $('.number-exam').append(`
-                        <div class="col-4  mt-2">
+                        <div class="col-1  mt-2">
                             <span class="w-num current">${i+1}</span>
                         </div>
                     `);
                 }else{
                     $('.number-exam').append(`
-                        <div class="col-4  mt-2">
+                        <div class="col-1  mt-2">
                             <span class="w-num">${i+1}</span>
                         </div>
                     `);
