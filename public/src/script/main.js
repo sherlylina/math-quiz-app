@@ -1,5 +1,5 @@
 
-let dataSoal, totalSeconds = 0, clearTime, time = 10000, result;
+let dataSoal, totalSeconds = 0, clearTime, time = 20
 
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -52,7 +52,7 @@ function mainQuestion(params){
         }else{
             shuffle(dataSoal);
             let i;
-            clearTime = setInterval(setTime, 1000);;
+            clearTime = setInterval(setTime, 1000);
             for(i = 0; i < dataSoal.length ; i++){
                 $('.exam-exercise').slick('slickAdd',`
                 <div class="question" id=${i}>
@@ -113,22 +113,17 @@ $('#myForm').on('submit', function(e) {
     // Get all the forms elements and their values in one step
     let values = [];
     e.preventDefault();
-    // var values = $(this).serialize();
-    // console.log(values);
-    // console.log('a')
     $.each($('#myForm').serializeArray(), (i, field) => {
         values.push({"soal": dataSoal[i],"answer": field.value})
     });
-    result = values;
-    retrieveResult();
+    window.localStorage.setItem("result", JSON.stringify(values));
+    window.location.href = './result.html';
 });
 
 function retrieveResult(){
     let i;
-    window.location.hash = 'result';
     let count = 0;
-    $('#questions').hide();
-    $('#result').show();
+    let result = JSON.parse(window.localStorage.getItem("result"));
     if(result){
         for(i = 0; i < result.length; i++){
             if(result[i].answer == result[i].soal.jawaban){
@@ -163,9 +158,6 @@ function retrieveResult(){
 $('#myForm').on('input paste', 'input', function(){
     // Get all the forms elements and their values in one step
     let values = [];
-    // var values = $(this).serialize();
-    // console.log(values);
-    // console.log('a')
     $.each($('#myForm').serializeArray(), (i, field) => {
         values.push({"soal": dataSoal[i],"answer": field.value});
     });
@@ -177,7 +169,7 @@ $('#myForm').on('input paste', 'input', function(){
             $(`.w-num:eq(${i})`).removeClass('active');
         }
     };
-    result = values;
+    window.localStorage.setItem("result", JSON.stringify(values));
 });
 
 
@@ -188,7 +180,7 @@ function setTime() {
     $('#second').text(pad(totalSeconds % 60));
     if(totalSeconds == time){
         clearInterval(clearTime);
-        retrieveResult();
+        window.location.href = './result.html';
     }
 }
 

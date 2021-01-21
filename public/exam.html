@@ -71,10 +71,8 @@
     <script src="./vendor/slick/slick.min.js"></script>
     <script src="./src/script/main.js"></script>
     <script>
-        // window.onbeforeunload = function() {
-        //     return "are you sure to reload?, we dont save your previous answer";
-        // }
         $(document).ready(function(){
+            window.localStorage.setItem("result", null);
             $('.exam-exercise').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
@@ -89,11 +87,9 @@
             $('.exam-exercise').on('afterChange', function(event, slick, currentSlide){
                 $('.w-num').removeClass('current');
                 $(`.w-num:eq(${currentSlide})`).addClass('current');
-                // left
             });
             mainQuestion('exam');
         });
-      
     </script>
 </body>
 </html>
