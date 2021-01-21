@@ -18,19 +18,64 @@
                         <img class="img-1 w-100"  src="./src/images/comp/gif-awan.gif" alt="">
                         <img class="img-2" src="./src/images/comp/gif-naga.gif" alt="">
                     </div>
-                    <div class="start">
-                        <form action="">
-                            <div class="btn  button-blue mb-3">
-                                <input type="text" placeholder="name" id="name" name="name">
+                    <div class="row">
+                        <div class="col-md-10 mx-auto pb-5">
+                            <div class="start">
+                                <div class="title mb-5">
+                                    <img class="w-100" src="./src/images/comp/title.png" alt="">
+                                </div>
+                  
+                                    <form id="myForm" method="post" action="">
+                                        <h4 style="text-shadow: 1px 1px black;" class="text-center text-dark" >Input Your Name</h4>
+                                        <div class="btn mx-auto  button-blue mb-3">
+                                            <input type="text" maxlength="8" placeholder="name" id="name" name="name">
+                                        </div>
+                                        <div class="submit">
+                                            <button class="btn mx-auto button-green" type="submit">Start</button>
+                                        </div>
+                                    </form>
+                           
+                                
                             </div>
-                            <div class="submit">
-                                <button class="btn button-green">Start</button>
-                            </div>
-                        </form>
+                        </div>
                     </div>
+                   
                 </div>
             </div>
         </div>
     </div>
+
+     <!-- vendor -->
+     <script src="./vendor/jquery/jquery.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+     <script> 
+            $('#myForm').on('submit', function(e) {
+                let value;
+                e.preventDefault();
+                $.each($('#myForm').serializeArray(), (i, field) => {
+                    value = field.value;
+                });
+                if(value){
+                    window.localStorage.setItem("user", value);
+                    window.location.href = './menu.html';
+                }else{
+                    Swal.fire({
+                        icon: 'info',
+                        text: 'Please input your name before start!'
+                    });
+                }
+      
+            });
+
+            window.localStorage.setItem("addition", false);
+    
+    window.localStorage.setItem("subtraction", false);
+
+
+    window.localStorage.setItem("multiplication", false);
+
+
+    window.localStorage.setItem("division", false);
+     </script>
 </body>
 </html>

@@ -23,10 +23,10 @@
                         <div class="col-md-3 px-0 mx-auto">
                             <div class="w-name position-relative">
                                 <img class="w-100" src="./src/images/comp/Button-Nama.png" alt="">
-                                <h1>HARRY</h1>
+                                <h1 class="text-uppercase name"></h1>
                             </div>
                             <div class="star my-4">
-                                <img src="" alt="">
+                                <img class="w-100" src="" alt="">
                             </div>
                             <div class="score">
                                 <button id="score" style="font-size: 15pt; text-transform: initial;" class="w-100 total btn button-green"></button>
@@ -35,14 +35,14 @@
                     </div>
                     <div class="row warp-abs abs-down justify-content-around">
                        <div class="col-2 px-5">
-                           <a class="d-inline-block" href="./exam.html">
-                              <img class="w-100" src="./src/images/comp/Button-Pink.png" alt="">
-                           </a>
+                      
+                              <img class="pointer ask-back w-100" src="./src/images/comp/Button-Pink.png" alt="">
+    
                            
                        </div>
                        <div class="col-2 px-5">
-                           <a  class="d-inline-block" href="./menu.html">
-                              <img class="w-100" src="./src/images/comp/Button-Home.png" alt="">
+                           <a  class="d-inline-block" href="./index.html">
+                              <img class="w-100" src="./src/images/comp/icon-orange.png" alt="">
                            </a>
                        </div>
                     </div>
@@ -54,6 +54,7 @@
     
     <!-- vendor -->
     <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="./src/script/main.js"></script>
     <script>
         // window.onbeforeunload = function() {
@@ -62,6 +63,7 @@
         $(document).ready(function(){
             let status = window.localStorage.getItem("result");
             if(status != 'null'){
+                $('.name').text(window.localStorage.getItem("user"));
                 retrieveResult();
             }else{
                 window.location.href = "./exam.html";

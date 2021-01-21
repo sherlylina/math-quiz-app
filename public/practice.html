@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="main-practice">
+    <div class="main-practice" id="">
         <div class="container">
             <div class="row">
                 <div class="col-12 bg-main" style="background-image: url('./src/images/bg/bg-menu.jpg')">
@@ -25,10 +25,8 @@
                                 <h3 class="text-capitalize mb-0"></h3>
                             </div>
                         </div>
-                        <div class="col-1">
-                            <a class="d-inline-block" href="./menu.html">
-                                <img src="./src/images/comp/Button-Home.png" class="w-100" alt="">
-                            </a>
+                        <div class="col-1" >
+                             <img src="./src/images/comp/icon-menu.png" class="w-100 back-practice pointer grayscale" alt="">
                         </div>
                     </div>
                     <div class="row w-100">
@@ -70,6 +68,7 @@
                 prevArrow: $('#prev'),
                 nextArrow: $('#next')
             });
+            $('.main-practice').attr('id', takeHash);
             $('.tag-name h3').text(takeHash);
             mainQuestion(takeHash);
         });

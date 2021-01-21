@@ -16,39 +16,93 @@
             <div class="row">
                 <div class="col-12 bg-main" style="background-image: url('./src/images/bg/bg-menu.jpg')">
                    <div class="row warp-abs abs-top justify-content-between">
-                       <div class="col-3 pr-md-5">
-                            <a class="d-block" href="">
-                                <img class="w-100" src="./src/images/comp/menu-button.png" alt="">
-                            </a>
-                       </div>
+                        <div class="col-3 pr-md-4">
+                            <div class="tag-name">
+                                <h3 class="text-capitalize mb-0">Main Menu</h3>
+                            </div>
+                        </div>
                        <div class="col-6 pt-4 text-right">
-                            <h2>Welcome, Harry</h2>
+                            <h2 class="name">Welcome, Harry</h2>
                        </div>
                    </div>
                    <div class="warp-menu w-100">
-                        <a href="./addition.html" class="menu-play">
+                        <a class="menu-play">
                             <img class="icon" src="./src/images/comp/Penambahan.png" alt="">
                             <h1 class="mb-0">ADDITION</h1>
-                    </a>
-                        <a href="./subtraction.html" class="menu-play mt-5">
+                        </a>
+                        <a class="menu-play mt-5">
                             <img class="icon" src="./src/images/comp/Pengurangan.png" alt="">
                             <h1 class="mb-0">SUBTRACTION</h1>
                         </a>
-                        <a  href="./times.html" class="menu-play mt-5">
+                        <a  class="menu-play mt-5">
                             <img class="icon" src="./src/images/comp/Perkalian.png" alt="">
                             <h1 class="mb-0">MULTIPLICATION</h1>
                         </a>
-                        <a href="./division.html" class="menu-play mt-5">
+                        <a  class="menu-play mt-5">
                             <img class="icon" src="./src/images/comp/Pembagian.png" alt="">
                             <h1 class="mb-0">DIVISION</h1>
                         </a>
                    </div>
                     <div class="exam warp-abs abs-down">
-                        <a class="btn button-green" href="./exam.html">EXAM</a>
+                        <button class="btn button-green exam">EXAM</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- vendor -->
+    <script src="./vendor/jquery/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script> 
+        $('.name').text('Welcome, ' +  window.localStorage.getItem("user"));
+        let count = 0;
+        if(window.localStorage.getItem("addition") == 'true'){
+            $('.menu-play').eq(0).addClass('grayscale');
+            count++;
+        }
+        if(window.localStorage.getItem("subtraction") == 'true'){
+            $('.menu-play').eq(1).addClass('grayscale');
+            count++;
+        }
+        if(window.localStorage.getItem("multiplication") == 'true'){
+            $('.menu-play').eq(2).addClass('grayscale');
+            count++;
+        }
+        if(window.localStorage.getItem("division") == 'true'){
+            $('.menu-play').eq(3).addClass('grayscale');
+            count++;
+        }
+
+        if(!$('.menu-play').eq(0).hasClass('grayscale')){
+            $('.menu-play').eq(0).attr('href', './addition.html');
+            
+        }
+        if(!$('.menu-play').eq(1).hasClass('grayscale')){
+            $('.menu-play').eq(1).attr('href', './subtraction.html');
+            
+        }
+        if(!$('.menu-play').eq(2).hasClass('grayscale')){
+            $('.menu-play').eq(2).attr('href', './multiplication.html');
+            
+        }
+        if(!$('.menu-play').eq(3).hasClass('grayscale')){
+            $('.menu-play').eq(3).attr('href', './division.html');
+            
+        }
+
+
+
+        $(document).on('click', '.exam', function(){ 
+            if(count != 4){
+                Swal.fire({
+                    icon: 'info',
+                    title: 'Do your practice first!'
+                })
+            }else{
+                window.location.href = './exam.html'
+            }
+        }); 
+    </script>
 </body>
 </html>

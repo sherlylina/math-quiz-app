@@ -232,17 +232,27 @@ a:hover{
     position: relative;
 }
 
+::placeholder{
+    color: #eeeeee;
+}
+
+
 /* menu */
 
 .main-menu .menu-play{
     background-image: url(../images/comp/kayu-play.png);
     width: 100%;
-    height: 80px;
+    height: 90px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
+}
+
+.grayscale{
+    filter: grayscale(1);
+    cursor: initial !important;
 }
 
 .main-menu .menu-play:hover .icon{

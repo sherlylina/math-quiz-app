@@ -1,5 +1,5 @@
 
-let dataSoal, totalSeconds = 0, clearTime, time = 20
+let dataSoal, totalSeconds = 0, clearTime, time = 3600
 
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -81,24 +81,49 @@ function mainQuestion(params){
     });
 }
     
-
+let count = 0;
 $(document).on('click', '.box-answer', function(){ 
     let ans = $(this).text();
     let ansParent = $(this).parents('.question').attr('id');
-    if(ans == dataSoal[ansParent].jawaban){
-        console.log('bener');
-        Swal.fire({
-            icon: 'success',
-            title: 'Benar'
-        });
-    }else{
-        console.log('salah');
-        Swal.fire({
-            icon: 'error',
-            title: 'Salah'
-        });
+    if(count != 3){
+        if(ans == dataSoal[ansParent].jawaban){
+            console.log('bener');
+            Swal.fire({
+                icon: 'success',
+                title: 'Benar'
+            });
+            count = count + 1;
+            if(count == 3){
+                $('.back-practice').removeClass('grayscale');
+            }
+
+        }else{
+            console.log('salah');
+            Swal.fire({
+                icon: 'error',
+                title: 'Salah'
+            });
+        }
     }
 }); 
+
+$(document).on('click', '.back-practice', function(){ 
+    window.location.href = './menu.html';
+    if($('.main-practice').attr('id') == 'addition'){
+        window.localStorage.setItem("addition", true);
+    }
+    if($('.main-practice').attr('id') == 'subtraction'){
+        window.localStorage.setItem("subtraction", true);
+    }
+    if($('.main-practice').attr('id') == 'multiplication'){
+        window.localStorage.setItem("multiplication", true);
+    }
+    if($('.main-practice').attr('id') == 'division'){
+        window.localStorage.setItem("division", true);
+    }
+    console.log('a')
+}); 
+
 
 
 $(document).on('click', '.w-num', function(){ 
@@ -127,32 +152,43 @@ function retrieveResult(){
     if(result){
         for(i = 0; i < result.length; i++){
             if(result[i].answer == result[i].soal.jawaban){
-                $('.result-warp').append(`
-                    <div class="status-answer true">
-                        <h5 class="ans-ques">${result[i].soal.pertanyaan}</h5>
-                        <h5 class="t-f">Benar</h5>
-                        <h5 class="right-ans">Jawabannya Anda yaitu ${result[i].soal.jawaban}</h5>
-                    </div>
-                `);
-                count++;
-            }else{
-                $('.result-warp').append(`
-                    <div class="status-answer false">
-                        <h5 class="ans-ques">${result[i].soal.pertanyaan}</h5>
-                        <h5 class="t-f">Salah</h5>
-                        <h5 class="right-ans">Jawaban yang benar yaitu ${result[i].soal.jawaban}</h5>
-                    </div>
-                `);
-            };
+                // $('.result-warp').append(`
+                //     <div class="status-answer true">
+                //         <h5 class="ans-ques">${result[i].soal.pertanyaan}</h5>
+                //         <h5 class="t-f">Benar</h5>
+                //         <h5 class="right-ans">Jawabannya Anda yaitu ${result[i].soal.jawaban}</h5>
+                //     </div>
+                // `);
+                count = count + 10;
+            }
+            // }else{
+            //     $('.result-warp').append(`
+            //         <div class="status-answer false">
+            //             <h5 class="ans-ques">${result[i].soal.pertanyaan}</h5>
+            //             <h5 class="t-f">Salah</h5>
+            //             <h5 class="right-ans">Jawaban yang benar yaitu ${result[i].soal.jawaban}</h5>
+            //         </div>
+            //     `);
+            // };
         };
-    }else{
-        $('.result-warp').append(`
-            <div class="status-answer">
-                <h5 class="ans-ques">Maaf Anda belum menjawab satu soal pun</h5>
-            </div>
-        `);
     }
-    $('.total').text('Your Score is ' + count*10);
+
+    if(count == 0 || count <= 99){
+        console.log('a');
+        $('.star img').attr('src', './src/images/comp/Button-Kayu-Star.png');
+    }else if(count >= 100 || count <= 199){
+        console.log('b');
+        $('.star img').attr('src', './src/images/comp/Bintang-1.png');
+    }else if(count >= 200 || count <= 299){
+        console.log('c');
+        $('.star img').attr('src', './src/images/comp/Bintang-2.png');
+    }else if(count >= 300){
+        console.log('d');
+        $('.star img').attr('src', './src/images/comp/Bintang-3.png');
+    }
+
+    
+    $('.total').text('Your Score is ' + count);
 }
 
 $('#myForm').on('input paste', 'input', function(){
@@ -192,3 +228,31 @@ function pad(val) {
     return valString;
   }
 }
+
+$(document).on('click', '.ask-back', function(){ 
+    Swal.fire({
+        title: 'Make your choice!',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Retry Exam',
+        cancelButtonText: 'Main Menu'
+        }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = "./exam.html"
+        }else{  
+            window.location.href = "./menu.html";
+        
+            window.localStorage.setItem("addition", false);
+    
+            window.localStorage.setItem("subtraction", false);
+        
+        
+            window.localStorage.setItem("multiplication", false);
+        
+
+            window.localStorage.setItem("division", false);
+            
+        }
+    })
+}); 
