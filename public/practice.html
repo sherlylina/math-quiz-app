@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mathematic for Kids</title>
     <!-- vendor -->
     <link rel="stylesheet" href="./vendor/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./vendor/slick/slick.min.css">
     <link rel="stylesheet" href="./vendor/slick/slick-theme.min.css">
     <!-- style -->
     <link rel="stylesheet" href="./src/styles/main.css">
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="main-practice" id="">
@@ -54,7 +51,6 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script>
         $(document).ready(function(){
-         // pagination
             let takeHash = window.location.hash;
             takeHash = takeHash.replace('#', '');
             $('.practice').slick({
@@ -72,7 +68,6 @@
             $('.tag-name h3').text(takeHash);
             mainQuestion(takeHash);
         });
-      
     </script>
 </body>
 </html>

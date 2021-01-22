@@ -11,6 +11,11 @@
 </head>
 <body>
     <div class="main-home">
+        <div class="d-none">
+            <audio controls autoplay loop class="song">
+                <source src="./src/sound/menu.mp3" type="audio/mpeg">
+            </audio>
+        </div>
         <div class="container">
             <div class="row">
                 <div class="col-12 bg-main" style="background-image: url('./src/images/bg/bg-home.jpg')">
@@ -24,18 +29,15 @@
                                 <div class="title mb-5">
                                     <img class="w-100" src="./src/images/comp/title.png" alt="">
                                 </div>
-                  
-                                    <form id="myForm" method="post" action="">
-                                        <h4 style="text-shadow: 1px 1px black;" class="text-center text-dark" >Input Your Name</h4>
-                                        <div class="btn mx-auto  button-blue mb-3">
-                                            <input type="text" maxlength="8" placeholder="name" id="name" name="name">
-                                        </div>
-                                        <div class="submit">
-                                            <button class="btn mx-auto button-green" type="submit">Start</button>
-                                        </div>
-                                    </form>
-                           
-                                
+                                <form id="myName" method="post" action="">
+                                    <h4 style="text-shadow: 1px 1px black;" class="text-center text-dark" >Input Your Name</h4>
+                                    <div class="btn mx-auto  button-blue mb-3">
+                                        <input type="text" maxlength="8" placeholder="name" id="name" name="name">
+                                    </div>
+                                    <div class="submit">
+                                        <button class="btn mx-auto button-green" type="submit">Start</button>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -48,11 +50,13 @@
      <!-- vendor -->
      <script src="./vendor/jquery/jquery.min.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+     <script src="./src/script/main.js"></script>
      <script> 
-            $('#myForm').on('submit', function(e) {
+       $(document).ready(function(){
+            $('#myName').on('submit', function(e) {
                 let value;
                 e.preventDefault();
-                $.each($('#myForm').serializeArray(), (i, field) => {
+                $.each($('#myName').serializeArray(), (i, field) => {
                     value = field.value;
                 });
                 if(value){
@@ -64,18 +68,9 @@
                         text: 'Please input your name before start!'
                     });
                 }
-      
             });
-
-            window.localStorage.setItem("addition", false);
-    
-    window.localStorage.setItem("subtraction", false);
-
-
-    window.localStorage.setItem("multiplication", false);
-
-
-    window.localStorage.setItem("division", false);
+            resetStatus();
+       })
      </script>
 </body>
 </html>

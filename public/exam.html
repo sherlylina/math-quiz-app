@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mathematic for Kids</title>
     <!-- vendor -->
     <link rel="stylesheet" href="./vendor/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./vendor/slick/slick.min.css">
@@ -32,12 +32,12 @@
                                         <span>:</span>
                                         <span id="second"></span>
                                     </div>
-                                    <div class="col-md-10 bg-board px-3 py-0 mx-auto" style="backgroundbackground-position: top; height: 280px;">
+                                    <div class="col-md-10 bg-board px-3 py-0 mx-auto" style="background-image: url('./src/images/bg/Papan-tulis-exam.png'); height: 287px;">
                                         <div class="exam-exercise h-100">
                                         </div>
                                     </div>
                                     <div class="col-md-10 mx-auto">
-                                        <div class="row number-exam text-center">
+                                        <div class="row number-exam mt-3 text-center">
                                         </div>
                                     </div>
                                 </div>
@@ -58,7 +58,6 @@
                 </div>
             </div>
         </div>
-       
     </div>
 
     <!-- vendor -->
@@ -66,6 +65,9 @@
     <script src="./vendor/slick/slick.min.js"></script>
     <script src="./src/script/main.js"></script>
     <script>
+        // $(window).bind('beforeunload', function(){
+        //      return 'Are you sure you want to leave?';
+        // });
         $(document).ready(function(){
             window.localStorage.setItem("result", null);
             $('.exam-exercise').slick({

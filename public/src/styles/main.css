@@ -38,7 +38,6 @@ h1, h2, h3, h4, h5, h6{
 .button-green{
     background-image: url('../images/comp/button-hijau.png');
 }
-
 input{
     border: none;
     background: transparent;
@@ -61,16 +60,12 @@ a:hover{
     text-decoration: initial;
     color: inherit;
 }
-
-
 .slick-next:before, .slick-prev:before{
     color: black;
 }
-
 .slick-list, .slick-track{
     height: 100%;
 }
-
 .main-exam .w-num{
     cursor: pointer;
     display: block;
@@ -81,28 +76,29 @@ a:hover{
     padding: 8px;
     font-weight: 700;
 }
-
 .main-exam .w-num.current{
    background: green;
 }
-
 .main-exam .w-num.active{
     background: gray;
 }
-
 .main-exam .slick-next, .main-exam .slick-prev{
     top: initial;
     bottom: 0;
 }
-
 .main-exam .slick-next{
     right: 0;
 }
-
+.essay-input{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    padding: 0 100px;
+}
 .main-exam .slick-prev{
     right: 0;
 }
-
 .soal span{
     background: red;
     color: white;
@@ -113,17 +109,14 @@ a:hover{
     align-items: center;
     justify-content: center;
 }
-
 .question{
     text-align: center;
     position: relative;
     outline: none !important;
 }
-
 .main-practice .question {
     padding-top: 9rem;
 }
-
 .question .w-choice{
     position: absolute;
     bottom: 15px;
@@ -132,15 +125,12 @@ a:hover{
     justify-content: space-evenly;
     width: 100%;
 }
-
 .question .w-ques{
     font-size: 60pt;
     font-weight: 700;
     letter-spacing: 8pt;
     color: #0A1172;
 }
-
-
 .question .box-answer{
     background-image: url(../images/comp/Bulatan-Hijau.png);
     background-size: contain;
@@ -155,9 +145,6 @@ a:hover{
     font-weight: 700;
     cursor: pointer;
 }
-
-/* background */
-
 .bg-main{
     background-size: cover;
     background-position: center;
@@ -171,7 +158,6 @@ a:hover{
     position: relative;
     box-shadow: 0 6px 7px rgba(0,0,0,.25);
 }
-
 .bg-board{
     background-image: url('../images/bg/Whiteboard.png');
     width: 100%;
@@ -182,7 +168,6 @@ a:hover{
     padding: 25px 40px;
     overflow: hidden;
 }
-
 .tag-name{
     background-image: url('../images/bg/bg-kosong.png');
     width: 100%;
@@ -194,32 +179,24 @@ a:hover{
     align-items: center;
     justify-content: center;
 }
-
-/* abs */
-
 .warp-abs{
     position: absolute;
     width: 100%;
     left: 15px;
 }
-
 .abs-top{
     top: 15px;
 }
-
 .abs-down{
     bottom: 15px;
     display: flex;
     justify-content: center;
 }
-/* home */
-
 .main-home .gif img{
     position: absolute;
     left: 0;
     top: 0;
 }
-
 .main-home .gif .img-2{
     width: 70%;
     top: initial;
@@ -227,18 +204,12 @@ a:hover{
     bottom: 20px;
     right: 0;
 }
-
 .main-home .start{
     position: relative;
 }
-
 ::placeholder{
     color: #eeeeee;
 }
-
-
-/* menu */
-
 .main-menu .menu-play{
     background-image: url(../images/comp/kayu-play.png);
     width: 100%;
@@ -249,26 +220,20 @@ a:hover{
     display: flex;
     align-items: center;
 }
-
 .grayscale{
     filter: grayscale(1);
     cursor: initial !important;
 }
-
 .main-menu .menu-play:hover .icon{
     animation: jello 2s infinite;
 }
-
 .main-menu .menu-play .icon{
     height: 125px;
     width: 125px;
 }
-
-
 #prev.slick-disabled, #next.slick-disabled{
     display: none;
 }
-
 .bg-kayu{
     background-image: url(../images/comp/Kayu.png);
     height: 130px;
@@ -276,7 +241,7 @@ a:hover{
     background-size: cover;
     width: 100%;
     position: absolute;
-    bottom: -30px;
+    bottom: -10px;
     left: 0;
     display: flex;
     align-items: center;
@@ -284,7 +249,6 @@ a:hover{
     overflow: hidden;
     padding: 0 100px;
 }
-
 .main-exam .question .soal label{
     font-size: 50pt;
     font-weight: 700;
@@ -292,13 +256,11 @@ a:hover{
     color: #0A1172;
     padding-top: 3.5rem;
 }
-
 .main-exam .time{
     font-size: 15pt;
     font-weight: 700;
     text-shadow: 2px 2px black;
 }
-
 .main-result .w-name h1{
     position: absolute;
     left: 0;
