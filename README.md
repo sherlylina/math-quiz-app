@@ -1,1 +1,1 @@
-# math-quiz-app
+# math quiz app
